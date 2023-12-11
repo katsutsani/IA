@@ -94,3 +94,11 @@ TextureImporter:
   userData: '{"mode":0,"colorKeys":[{"color":{"r":0.10377359390258789,"g":0.10377359390258789,"b":0.10377359390258789,"a":1.0},"time":0.304768443107605},{"color":{"r":0.40566039085388186,"g":0.40566039085388186,"b":0.40566039085388186,"a":1.0},"time":0.4261844754219055},{"color":{"r":0.6872775554656982,"g":0.6872775554656982,"b":0.6872775554656982,"a":1.0},"time":0.5499961972236633},{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}'
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 216102
+  packageName: OToon - URP Toon Shading
+  packageVersion: 1.6.9
+  assetPath: Assets/OToon- URP Toon Shading/Demo(Can be delete)/Scenes/2 NPRStyles
+    RobotKyle/Textures/ShaderVerse 1_RampTex.png
+  uploadId: 617111

@@ -94,3 +94,11 @@ TextureImporter:
   userData: '{"mode":0,"colorKeys":[{"color":{"r":0.37057265639305117,"g":0.21573513746261598,"b":0.4528301954269409,"a":1.0},"time":0.3316243290901184},{"color":{"r":0.639195442199707,"g":0.7207452654838562,"b":0.7924528121948242,"a":1.0},"time":0.3341878354549408},{"color":{"r":0.6484653949737549,"g":0.7683071494102478,"b":0.872455358505249,"a":1.0},"time":0.4730144143104553},{"color":{"r":0.9878785610198975,"g":0.9920108914375305,"b":0.9956020712852478,"a":1.0},"time":0.49871060252189639},{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":0.9948577284812927}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}'
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 216102
+  packageName: OToon - URP Toon Shading
+  packageVersion: 1.6.9
+  assetPath: Assets/OToon- URP Toon Shading/Demo(Can be delete)/Scenes/5 Stylized
+    Character UnityChan/Textures/UCSSU_Hoodie_RampTex.png
+  uploadId: 617111

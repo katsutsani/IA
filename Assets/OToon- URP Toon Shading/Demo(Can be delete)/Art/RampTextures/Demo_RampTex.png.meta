@@ -94,3 +94,10 @@ TextureImporter:
   userData: '{"mode":1,"colorKeys":[{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":0.3856107294559479},{"color":{"r":0.5188679099082947,"g":0.5188679099082947,"b":0.5188679099082947,"a":1.0},"time":0.7454947829246521},{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}'
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 216102
+  packageName: OToon - URP Toon Shading
+  packageVersion: 1.6.9
+  assetPath: Assets/OToon- URP Toon Shading/Demo(Can be delete)/Art/RampTextures/Demo_RampTex.png
+  uploadId: 617111

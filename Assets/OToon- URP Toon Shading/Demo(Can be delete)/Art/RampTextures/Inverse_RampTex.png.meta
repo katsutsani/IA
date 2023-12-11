@@ -94,3 +94,10 @@ TextureImporter:
   userData: '{"mode":0,"colorKeys":[{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":0.0},{"color":{"r":0.0,"g":0.966292142868042,"b":1.0,"a":1.0},"time":0.10952925682067871},{"color":{"r":0.44811320304870608,"g":0.983095645904541,"b":1.0,"a":1.0},"time":0.20000000298023225},{"color":{"r":0.0,"g":0.19365617632865907,"b":0.6666666865348816,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}'
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 216102
+  packageName: OToon - URP Toon Shading
+  packageVersion: 1.6.9
+  assetPath: Assets/OToon- URP Toon Shading/Demo(Can be delete)/Art/RampTextures/Inverse_RampTex.png
+  uploadId: 617111

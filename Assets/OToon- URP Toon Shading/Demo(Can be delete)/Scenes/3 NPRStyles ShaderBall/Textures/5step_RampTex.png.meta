@@ -94,3 +94,11 @@ TextureImporter:
   userData: '{"mode":1,"colorKeys":[{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":0.25952544808387759},{"color":{"r":0.501960813999176,"g":0.501960813999176,"b":0.501960813999176,"a":1.0},"time":0.43572136759757998},{"color":{"r":0.7490196228027344,"g":0.7490196228027344,"b":0.7490196228027344,"a":1.0},"time":0.6666666865348816},{"color":{"r":0.8745098114013672,"g":0.8745098114013672,"b":0.8745098114013672,"a":1.0},"time":0.9428549408912659},{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}'
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 216102
+  packageName: OToon - URP Toon Shading
+  packageVersion: 1.6.9
+  assetPath: Assets/OToon- URP Toon Shading/Demo(Can be delete)/Scenes/3 NPRStyles
+    ShaderBall/Textures/5step_RampTex.png
+  uploadId: 617111

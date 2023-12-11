@@ -756,7 +756,8 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 64eaf7b3fb3edff4fbdae1d82d79e869, type: 3}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 64eaf7b3fb3edff4fbdae1d82d79e869,
+    type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
@@ -766,3 +767,11 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 216102
+  packageName: OToon - URP Toon Shading
+  packageVersion: 1.6.9
+  assetPath: Assets/OToon- URP Toon Shading/Demo(Can be delete)/Plugins/Robot Kyle/Model/Idle
+    animation.fbx
+  uploadId: 617111

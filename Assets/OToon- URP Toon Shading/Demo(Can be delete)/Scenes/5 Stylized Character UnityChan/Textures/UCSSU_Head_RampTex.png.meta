@@ -94,3 +94,11 @@ TextureImporter:
   userData: '{"mode":1,"colorKeys":[{"color":{"r":0.43396228551864626,"g":0.14124244451522828,"b":0.24351806938648225,"a":1.0},"time":0.1413901001214981},{"color":{"r":0.8705882430076599,"g":0.5490196347236633,"b":0.5176470875740051,"a":1.0},"time":0.7943388819694519},{"color":{"r":1.0,"g":0.9355345964431763,"b":0.9292452931404114,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}'
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 216102
+  packageName: OToon - URP Toon Shading
+  packageVersion: 1.6.9
+  assetPath: Assets/OToon- URP Toon Shading/Demo(Can be delete)/Scenes/5 Stylized
+    Character UnityChan/Textures/UCSSU_Head_RampTex.png
+  uploadId: 617111

@@ -94,3 +94,11 @@ TextureImporter:
   userData: '{"mode":1,"colorKeys":[{"color":{"r":0.0,"g":0.45714282989501955,"b":1.0,"a":1.0},"time":0.45244526863098147},{"color":{"r":0.2594339847564697,"g":1.0,"b":0.827201247215271,"a":1.0},"time":0.7499961853027344},{"color":{"r":0.9550499320030212,"g":1.0,"b":0.36320751905441286,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}'
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 216102
+  packageName: OToon - URP Toon Shading
+  packageVersion: 1.6.9
+  assetPath: Assets/OToon- URP Toon Shading/Demo(Can be delete)/Scenes/2 NPRStyles
+    RobotKyle/Textures/Polka_RampTex.png
+  uploadId: 617111

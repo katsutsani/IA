@@ -94,3 +94,11 @@ TextureImporter:
   userData: '{"mode":0,"colorKeys":[{"color":{"r":0.9084314703941345,"g":0.34433960914611819,"b":1.0,"a":1.0},"time":0.0},{"color":{"r":0.0,"g":1.0,"b":0.8446779251098633,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}'
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 216102
+  packageName: OToon - URP Toon Shading
+  packageVersion: 1.6.9
+  assetPath: Assets/OToon- URP Toon Shading/Demo(Can be delete)/Scenes/3 NPRStyles
+    ShaderBall/Textures/Neon_RampTex.png
+  uploadId: 617111

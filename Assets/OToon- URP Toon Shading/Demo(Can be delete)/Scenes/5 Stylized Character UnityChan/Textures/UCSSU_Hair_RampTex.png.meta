@@ -94,3 +94,11 @@ TextureImporter:
   userData: '{"mode":0,"colorKeys":[{"color":{"r":0.40566039085388186,"g":0.13203097879886628,"b":0.34290802478790285,"a":1.0},"time":0.18765544891357423},{"color":{"r":0.6235294342041016,"g":0.4745098054409027,"b":0.40784314274787905,"a":1.0},"time":0.2056611031293869},{"color":{"r":0.6226415038108826,"g":0.4749436378479004,"b":0.4082413613796234,"a":1.0},"time":0.503852903842926},{"color":{"r":1.0,"g":0.9355345964431763,"b":0.9292452931404114,"a":1.0},"time":0.5784084796905518}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}'
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 216102
+  packageName: OToon - URP Toon Shading
+  packageVersion: 1.6.9
+  assetPath: Assets/OToon- URP Toon Shading/Demo(Can be delete)/Scenes/5 Stylized
+    Character UnityChan/Textures/UCSSU_Hair_RampTex.png
+  uploadId: 617111

@@ -94,3 +94,11 @@ TextureImporter:
   userData: '{"mode":0,"colorKeys":[{"color":{"r":0.43396228551864626,"g":0.43396228551864626,"b":0.43396228551864626,"a":1.0},"time":0.0},{"color":{"r":1.0,"g":0.7645238041877747,"b":0.5330188274383545,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}'
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 216102
+  packageName: OToon - URP Toon Shading
+  packageVersion: 1.6.9
+  assetPath: Assets/OToon- URP Toon Shading/Demo(Can be delete)/Scenes/5 Stylized
+    Character UnityChan/Textures/face_RampTex.png
+  uploadId: 617111

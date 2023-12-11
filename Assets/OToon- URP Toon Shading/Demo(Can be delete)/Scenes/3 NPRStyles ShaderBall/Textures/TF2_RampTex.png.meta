@@ -94,3 +94,11 @@ TextureImporter:
   userData: '{"mode":0,"colorKeys":[{"color":{"r":0.028301894664764406,"g":0.028301894664764406,"b":0.028301894664764406,"a":1.0},"time":0.0},{"color":{"r":0.0,"g":0.023253340274095537,"b":0.1603773832321167,"a":1.0},"time":0.6428626179695129},{"color":{"r":0.33018869161605837,"g":0.33018869161605837,"b":0.33018869161605837,"a":1.0},"time":0.8595254421234131},{"color":{"r":1.0,"g":0.7098250985145569,"b":0.5801886916160584,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}'
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 216102
+  packageName: OToon - URP Toon Shading
+  packageVersion: 1.6.9
+  assetPath: Assets/OToon- URP Toon Shading/Demo(Can be delete)/Scenes/3 NPRStyles
+    ShaderBall/Textures/TF2_RampTex.png
+  uploadId: 617111

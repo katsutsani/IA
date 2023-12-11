@@ -3231,7 +3231,8 @@ ModelImporter:
     - name: Ellen_Chest
       parentName: Ellen_Spine
       position: {x: -0.0990385, y: -3.3259708e-18, z: 0.009736111}
-      rotation: {x: 0.0000000024922546, y: -0.0000018775463, z: 0.000000027419192, w: 1}
+      rotation: {x: 0.0000000024922546, y: -0.0000018775463, z: 0.000000027419192,
+        w: 1}
       scale: {x: 1, y: 1, z: 1.0000001}
     - name: Ellen_UpperChest
       parentName: Ellen_Chest
@@ -3701,7 +3702,8 @@ ModelImporter:
     - name: Ellen_Left_LowerLeg
       parentName: Ellen_Left_UpperLeg
       position: {x: -0.38615477, y: 0.000000043533287, z: 0}
-      rotation: {x: -0.0000000049165463, y: -0.0000010989598, z: -0.00000044419585, w: 1}
+      rotation: {x: -0.0000000049165463, y: -0.0000010989598, z: -0.00000044419585,
+        w: 1}
       scale: {x: 1.0000052, y: 0.9999978, z: 0.99999744}
     - name: Ellen_Left_Foot
       parentName: Ellen_Left_LowerLeg
@@ -3765,3 +3767,11 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 216102
+  packageName: OToon - URP Toon Shading
+  packageVersion: 1.6.9
+  assetPath: Assets/OToon- URP Toon Shading/Demo(Can be delete)/Plugins/3D Game Kit
+    - Character Pack/Characters/Ellen/Models/Ellen.fbx
+  uploadId: 617111

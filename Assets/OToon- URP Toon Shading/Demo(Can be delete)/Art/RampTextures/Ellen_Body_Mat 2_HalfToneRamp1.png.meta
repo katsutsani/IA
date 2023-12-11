@@ -94,3 +94,11 @@ TextureImporter:
   userData: '{"mode":0,"colorKeys":[{"color":{"r":0.4433962106704712,"g":0.4433962106704712,"b":0.4433962106704712,"a":1.0},"time":0.0},{"color":{"r":0.7830188870429993,"g":0.7830188870429993,"b":0.7830188870429993,"a":1.0},"time":0.4294193983078003},{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":0.7764706015586853}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}'
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 216102
+  packageName: OToon - URP Toon Shading
+  packageVersion: 1.6.9
+  assetPath: Assets/OToon- URP Toon Shading/Demo(Can be delete)/Art/RampTextures/Ellen_Body_Mat
+    2_HalfToneRamp1.png
+  uploadId: 617111

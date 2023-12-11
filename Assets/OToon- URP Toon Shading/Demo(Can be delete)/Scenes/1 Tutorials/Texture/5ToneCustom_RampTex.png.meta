@@ -94,3 +94,10 @@ TextureImporter:
   userData: '{"mode":0,"colorKeys":[{"color":{"r":0.349056601524353,"g":0.349056601524353,"b":0.349056601524353,"a":1.0},"time":0.0},{"color":{"r":1.0,"g":0.0,"b":0.07159805297851563,"a":1.0},"time":0.34447240829467776},{"color":{"r":0.0,"g":0.36830687522888186,"b":1.0,"a":1.0},"time":0.45500877499580386},{"color":{"r":0.0,"g":1.0,"b":0.29680824279785159,"a":1.0},"time":0.766063928604126},{"color":{"r":0.0,"g":0.698113203048706,"b":0.698113203048706,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}'
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 216102
+  packageName: OToon - URP Toon Shading
+  packageVersion: 1.6.9
+  assetPath: Assets/OToon- URP Toon Shading/Demo(Can be delete)/Scenes/1 Tutorials/Texture/5ToneCustom_RampTex.png
+  uploadId: 617111

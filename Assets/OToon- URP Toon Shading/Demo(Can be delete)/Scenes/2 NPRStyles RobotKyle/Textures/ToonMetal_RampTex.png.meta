@@ -94,3 +94,11 @@ TextureImporter:
   userData: '{"mode":1,"colorKeys":[{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":0.383031964302063},{"color":{"r":0.38679248094558718,"g":0.38679248094558718,"b":0.38679248094558718,"a":1.0},"time":0.8663309812545776},{"color":{"r":0.8773584961891174,"g":0.8773584961891174,"b":0.8773584961891174,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}'
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 216102
+  packageName: OToon - URP Toon Shading
+  packageVersion: 1.6.9
+  assetPath: Assets/OToon- URP Toon Shading/Demo(Can be delete)/Scenes/2 NPRStyles
+    RobotKyle/Textures/ToonMetal_RampTex.png
+  uploadId: 617111
