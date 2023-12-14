@@ -12,9 +12,15 @@ public class PlayerInputSystem : MonoBehaviour
     public GameObject Shoot;
     public GameObject Aim;
     public GameObject MeleeAttack;
+    public GameObject Defense;
+
+    public Collider Weapon;
+    public Collider Shield;
 
     Move moveScript;
     MeleeAttack attackScript;
+    Defend defenseScript;
+
     LookAt rotationScript;
 
     public Rigidbody CharacterBody;
@@ -26,9 +32,15 @@ public class PlayerInputSystem : MonoBehaviour
     void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
-        input = new PlayerInputActions();
         moveScript = moveObject.GetComponent<Move>();
         rotationScript = Aim.GetComponent<LookAt>();
+        attackScript = MeleeAttack.GetComponent<MeleeAttack>();
+        if (Shield)
+        {
+            defenseScript = Defense.GetComponent<Defend>();
+
+        }
+        input = new PlayerInputActions();
 
     }
 
@@ -36,6 +48,18 @@ public class PlayerInputSystem : MonoBehaviour
     {
         moveScript.HandleMovement(CharacterBody, animator);
         rotationScript.Rotate(CharacterBody.GetComponent<Transform>());
+        input.Player.Attack.started += ctx =>
+        {
+            attackScript.HandleAttack(Weapon,animator);
+        };
+        input.Player.Defend.started += ctx =>
+        {
+            defenseScript.HandleDefense(Shield, animator);
+        };
+        input.Player.Defend.canceled += ctx =>
+        {
+            defenseScript.StopDefending(Shield, animator);
+        };
     }
 
     void OnEnable()
@@ -45,17 +69,7 @@ public class PlayerInputSystem : MonoBehaviour
         input.Player.Move.canceled += moveScript.OnMovementCancelled;
 
 
-        //input.Player.Attack.performed += ctx =>
-        //{
-        //    isAttacking = true;
-        //    // Add animation attack
-        //};
-        //input.Player.Attack.canceled += ctx =>
-        //{
-        //    isAttacking = false;
-        //    // back to idle or movement
 
-        //};
 
     }
 
