@@ -1,74 +1,69 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 
 public class PlayerInputSystem : MonoBehaviour
 {
-    private Rigidbody playerBody;
+
+    public GameObject moveObject;
+    public GameObject Shoot;
+    public GameObject Aim;
+    public GameObject MeleeAttack;
+
+    Move moveScript;
+    MeleeAttack attackScript;
+    LookAt rotationScript;
+
+    public Rigidbody CharacterBody;
     public float Speed = 2.0f;
     private PlayerInput playerInput;
     PlayerInputActions input;
-    private InputAction moveAction;
-    public bool isAttacking;
-    private Animator animator;
-    private Vector2 moveVector = Vector2.zero;
+    public Animator animator;
 
     void Awake()
     {
-        playerBody = GetComponent<Rigidbody>();
         playerInput = GetComponent<PlayerInput>();
-        animator = GetComponent<Animator>();
         input = new PlayerInputActions();
+        moveScript = moveObject.GetComponent<Move>();
+        rotationScript = Aim.GetComponent<LookAt>();
 
-        input.Player.Attack.performed += ctx =>
-        {
-            isAttacking = true;
-            // Add animation attack
-        };
-        input.Player.Attack.canceled += ctx =>
-        {
-            isAttacking = false;
-            // back to idle or movement
-
-        };
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        HandleMovement();
-    }
-
-    void HandleMovement()
-    {
-        playerBody.velocity = new Vector3(moveVector.x, 0.0f, moveVector.y) * Speed;
+        moveScript.HandleMovement(CharacterBody, animator);
+        rotationScript.Rotate(CharacterBody.GetComponent<Transform>());
     }
 
     void OnEnable()
     {
         input.Player.Enable();
-        input.Player.Move.performed += OnMovementPerformed;
-        input.Player.Move.canceled += OnMovementCancelled;
+        input.Player.Move.performed += moveScript.OnMovementPerformed;
+        input.Player.Move.canceled += moveScript.OnMovementCancelled;
+
+
+        //input.Player.Attack.performed += ctx =>
+        //{
+        //    isAttacking = true;
+        //    // Add animation attack
+        //};
+        //input.Player.Attack.canceled += ctx =>
+        //{
+        //    isAttacking = false;
+        //    // back to idle or movement
+
+        //};
 
     }
 
     void OnDisable()
     {
         input.Player.Disable();
-        input.Player.Move.performed -= OnMovementPerformed;
-        input.Player.Move.canceled -= OnMovementCancelled;
+        input.Player.Move.performed -= moveScript.OnMovementPerformed;
+        input.Player.Move.canceled -= moveScript.OnMovementCancelled;
     }
 
-    public void OnMovementPerformed(InputAction.CallbackContext context)
-    {
-        moveVector = context.ReadValue<Vector2>();
-        animator.SetBool("isWalking", true);
-    }
-
-    public void OnMovementCancelled(InputAction.CallbackContext context)
-    {
-        moveVector = Vector2.zero;
-        animator.SetBool("isWalking", false);
-
-    }
 }
