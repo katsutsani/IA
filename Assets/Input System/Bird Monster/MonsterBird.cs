@@ -9,22 +9,34 @@ public class BirdInputSystem : MonoBehaviour
     private Vector2 moveMonster = Vector2.up;
     private Transform transformMonster;
     [SerializeField] Transform[] wayPoint;
+    [SerializeField] BoxCollider boxBird;
+    private GameObject target;
 
     private bool isWaiting = true;
     private float waitTime = 1.0f;
     private float waitCounter = 0.0f;
 
     private int currentWayPointIndex = 0;
+    private bool targetFind = false;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
         transformMonster = GetComponent<Transform>();
+        target = GameObject.Find("Knight");
     }
 
     private void Update()
     {
-        CheckWayPoints();
+        TriggerPlayer();
+        if( targetFind == false)
+        {
+            CheckWayPoints();
+        }
+        else
+        {
+            FollowPlayer();
+        }
     }
 
     void CheckWayPoints()
@@ -55,9 +67,23 @@ public class BirdInputSystem : MonoBehaviour
         }
     }
 
-    void checkPlayer()
-    {
 
+    private void TriggerPlayer()
+    {
+        if(Vector3.Distance(transformMonster.position, target.transform.position) < 5f)
+        {
+            targetFind = true;
+            animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            targetFind = false;
+            animator.SetBool("isRunning", false);
+        }
     }
 
+    void FollowPlayer()
+    {
+        transformMonster.position = Vector3.MoveTowards(transformMonster.position, target.transform.position, speed * Time.deltaTime);
+    }
 }
