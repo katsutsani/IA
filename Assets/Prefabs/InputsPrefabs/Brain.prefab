@@ -76,11 +76,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c9081d73d822ac4481cefdbc1da9c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveObject: {fileID: 0}
-  Shoot: {fileID: 0}
-  Aim: {fileID: 0}
-  MeleeAttack: {fileID: 0}
-  Defense: {fileID: 0}
+  moveObject: {fileID: 2116098902876845828, guid: 1fac05791f6c5d940b0f6ea4a2a4c1a4,
+    type: 3}
+  Shoot: {fileID: 3390365226464993213, guid: 942a8f5f7e2642e46bd24555a75dec10, type: 3}
+  Aim: {fileID: 3858571610060828238, guid: b31dcfff13fe770448e09c9a02f8a91c, type: 3}
+  MeleeAttack: {fileID: 3049907564078366770, guid: 969c4b3f30b8a5d4cb2979f3033e2f26,
+    type: 3}
+  Defense: {fileID: 4930551516477159530, guid: 5ccb418383221994fbad1fecc5acd545, type: 3}
   Weapon: {fileID: 0}
   Shield: {fileID: 0}
   CharacterBody: {fileID: 0}

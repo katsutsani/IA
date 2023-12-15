@@ -220,8 +220,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brain: {fileID: 0}
-  Weapon: {fileID: 0}
-  Shield: {fileID: 0}
+  Weapon: {fileID: 3600885804512746126}
+  Shield: {fileID: 1699606297221344690}
 --- !u!1 &8998450640234106215 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 360375151596564303, guid: 1ec7cad42e53d61459eeb9541207a52d,
