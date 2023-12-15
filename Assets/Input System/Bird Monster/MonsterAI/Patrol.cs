@@ -6,9 +6,9 @@ using BehaviorTree;
 
 public class Patrol : Node
 {
-    private Transform transform;
-    private Transform[] waypoints;
-    private Animator animator;
+    private Transform _transform;
+    private Transform[] _waypoints;
+    private Animator _animator;
 
     private int currentWaypointIndex = 0;
 
@@ -18,9 +18,9 @@ public class Patrol : Node
 
     public Patrol(Transform transform, Transform[] waypoints) 
     { 
-        animator = transform.GetComponent<Animator>();
-        this.transform = transform;
-        this.waypoints = waypoints;
+        _animator = transform.GetComponent<Animator>();
+        this._transform = transform;
+        this._waypoints = waypoints;
     }
 
     public override NodeState Evaluate()
@@ -31,25 +31,25 @@ public class Patrol : Node
             if (waitCounter >= waitTime)
             {
                 isWaiting = false;
-                animator.SetBool("isWalking", true);
+                _animator.SetBool("isWalking", true);
             }
         }
         else
         {
-            Transform wp = waypoints[currentWaypointIndex];
-            if (Vector3.Distance(transform.position, wp.position) < 1f)
+            Transform wp = _waypoints[currentWaypointIndex];
+            if (Vector3.Distance(_transform.position, wp.position) < 1f)
             {
-                transform.position = wp.position;
+                _transform.position = wp.position;
                 waitCounter = 0.0f;
                 isWaiting = true;
 
-                currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
-                animator.SetBool("isWalking", true);
+                currentWaypointIndex = (currentWaypointIndex + 1) % _waypoints.Length;
+                _animator.SetBool("isWalking", true);
             }
             else
             {
-                transform.position = Vector3.MoveTowards(transform.position, wp.position, MonsterData.speed * Time.deltaTime);
-                transform.LookAt(wp.position);
+                _transform.position = Vector3.MoveTowards(_transform.position, wp.position, MonsterData.speed * Time.deltaTime);
+                _transform.LookAt(wp.position);
             }
         }
 

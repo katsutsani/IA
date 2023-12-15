@@ -8,13 +8,13 @@ public class CheckRangePlayer : Node
 {
     LayerMask myLayerMask = LayerMask.GetMask("player");
 
-    private Transform transform;
-    private Animator animator;
+    private Transform _transform;
+    private Animator _animator;
 
     public CheckRangePlayer(Transform transform)
     {
-        this.transform = transform;
-        animator = transform.GetComponent<Animator>();
+        this._transform = transform;
+        _animator = transform.GetComponent<Animator>();
     }
 
     public override NodeState Evaluate()
@@ -22,12 +22,12 @@ public class CheckRangePlayer : Node
         object t = GetData("target");
         if (t == null )
         {
-            Collider[] colliders = Physics.OverlapSphere(transform.position, MonsterData.rangeSee, myLayerMask);
-            Debug.Log(colliders.Length);
+            Collider[] colliders = Physics.OverlapSphere(_transform.position, MonsterData.rangeSee, myLayerMask);
+
             if(colliders.Length > 0)
             {
                 parent.parent.SetData("target", colliders[0].transform);
-                animator.SetBool("isWalking", true);
+                _animator.SetBool("isWalking", true);
 
                 state = NodeState.SUCCESS;
                 return state;

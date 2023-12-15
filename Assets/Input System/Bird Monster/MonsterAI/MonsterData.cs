@@ -7,11 +7,17 @@ public class MonsterData : Tree
 
     public static float speed = 2f;
     public static float rangeSee = 6f;
+    public static float rangeAttack = 2f;
 
     protected override Node SetupTree()
     {
         Node root = new Selector(new List<Node>
         {
+            new Sequence(new List<Node>
+            {
+                new CheckRangeAttack(transform),
+                new Attack(transform),
+            }),
             new Sequence(new List<Node>
             {
                 new CheckRangePlayer(transform),
