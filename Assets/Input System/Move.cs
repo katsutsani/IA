@@ -6,30 +6,78 @@ using UnityEngine.InputSystem;
 public class Move : MonoBehaviour
 {
     public float Speed = 2.0f;
-    private Vector2 moveVector = Vector2.zero;
+    private Vector2 _moveVector = Vector2.zero;
+    private Vector3 finalVectorForward;
+    private Vector3 finalVectorRight;
 
     public void OnMovementPerformed(InputAction.CallbackContext context)
     {
-        moveVector = context.ReadValue<Vector2>();
+        _moveVector = context.ReadValue<Vector2>();
     }
 
     public void OnMovementCancelled(InputAction.CallbackContext context)
     {
-        moveVector = Vector2.zero;
+        _moveVector = Vector2.zero;
 
     }
 
-    public void HandleMovement(Rigidbody playerBody, Animator animator)
+    public void HandleMovement(Rigidbody playerBody, Animator animator, Vector2 moveVector)
     {
-        if(moveVector != Vector2.zero)
+        finalVectorForward = Vector3.zero;
+        finalVectorRight = Vector3.zero;
+        if (_moveVector != Vector2.zero || moveVector != Vector2.zero)
         {
-            animator.SetBool("isWalking", true);
+            if(_moveVector.y > 0)
+            {
+                animator.SetBool("isWalkingBackwards", false);
+                finalVectorForward = playerBody.transform.forward * Speed;
+                animator.SetBool("isWalking", true);
+            }
+            else if (_moveVector.y < 0)
+            {
+                animator.SetBool("isWalking", false);
+                finalVectorForward = -(playerBody.transform.forward) * Speed;
+                animator.SetBool("isWalkingBackwards", true);
+            }
+            if (_moveVector.x > 0)
+            {
+                finalVectorRight = playerBody.transform.right * Speed;
+                animator.SetBool("isWalking", true);
+            }
+            else if (_moveVector.x < 0)
+            {
+                finalVectorRight = -(playerBody.transform.right) * Speed;
+                animator.SetBool("isWalking", true);
+            }
+            playerBody.velocity = finalVectorForward + finalVectorRight;
+            //if (_moveVector.y == 1 || moveVector.y == 1)
+            //{
+            //    playerBody.velocity = playerBody.transform.forward * Speed;
+            //    animator.SetBool("isWalking", true);
+            //}
+            //else if (_moveVector.y == -1 || moveVector.y == -1)
+            //{
+            //    playerBody.velocity = -(playerBody.transform.forward) * Speed;
+            //    animator.SetBool("isWalkingBackwards", true);
+            //}
+            //if (_moveVector.x == 1 || moveVector.x == 1)
+            //{
+            //    playerBody.velocity = playerBody.transform.right * Speed;
+            //    animator.SetBool("isWalking", true);
+            //}
+            //else if (_moveVector.x == -1 || moveVector.x == -1)
+            //{
+            //    playerBody.velocity = -(playerBody.transform.right) * Speed;
+            //    animator.SetBool("isWalking", true);
+
+            //}
+
         }
         else
         {
             animator.SetBool("isWalking", false);
-
+            animator.SetBool("isWalkingBackwards", false);
         }
-        playerBody.velocity = new Vector3(moveVector.x, 0.0f, moveVector.y) * Speed;
+        //playerBody.velocity = new Vector3(_moveVector.x, 0.0f, _moveVector.y) * Speed;
     }
 }

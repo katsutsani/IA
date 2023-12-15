@@ -154,10 +154,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.3491361
-  m_Height: 2.5649173
+  m_Radius: 0.7071669
+  m_Height: 2.606373
   m_Direction: 1
-  m_Center: {x: 0, y: 1.2168456, z: 0.030833006}
+  m_Center: {x: 0.005232334, y: 1.2375735, z: 0.08406186}
 --- !u!54 &8919052851546227881
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -183,7 +183,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!95 &2682649731148731705
 Animator:

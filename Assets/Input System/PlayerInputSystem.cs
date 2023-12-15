@@ -46,7 +46,7 @@ public class PlayerInputSystem : MonoBehaviour
 
     private void Update()
     {
-        moveScript.HandleMovement(CharacterBody, animator);
+        moveScript.HandleMovement(CharacterBody, animator, Vector2.zero);
         rotationScript.Rotate(CharacterBody.GetComponent<Transform>());
         input.Player.Attack.started += ctx =>
         {
