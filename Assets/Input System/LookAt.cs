@@ -6,6 +6,10 @@ public class LookAt : MonoBehaviour
 {
     public Transform target;
 
+    private void Awake()
+    {
+        gameObject.SetActive(true);
+    }
     public void Rotate(Transform entityTransform)
     {
 

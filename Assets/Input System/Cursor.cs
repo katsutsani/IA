@@ -5,6 +5,10 @@ using UnityEngine;
 public class Cursor : MonoBehaviour
 {
     public Camera _camera;
+    private void Awake()
+    {
+        gameObject.SetActive(true);
+    }
     public void Update()
     {
         Vector3 mousePos = Input.mousePosition;

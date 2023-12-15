@@ -19,12 +19,15 @@ public class EnemyAI : MonoBehaviour
         else
         {
             Debug.Log("je suis la");
+            gameObject.layer = LayerMask.NameToLayer("Default");
+            gameObject.transform.position = new Vector3(0.8135204f, 0.02000046f, -1.324965f);
             return true;
         }
     }
 
     public void DestroyEntity()
     {
-        Destroy(gameObject);
+
+        gameObject.layer = LayerMask.NameToLayer("player");
     }
 }

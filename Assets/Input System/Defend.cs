@@ -5,6 +5,11 @@ using UnityEngine;
 public class Defend : MonoBehaviour
 {
     Coroutine _checkCollision;
+
+    private void Awake()
+    {
+        gameObject.SetActive(true);
+    }
     public void HandleDefense(Collider Shield, Animator animator)
     {
         animator.SetBool("isBlocking", true);

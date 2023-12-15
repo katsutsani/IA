@@ -68,6 +68,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Knight
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1ec7cad42e53d61459eeb9541207a52d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3862085102932151524, guid: 1ec7cad42e53d61459eeb9541207a52d,
         type: 3}
       propertyPath: m_IsActive
@@ -97,10 +102,18 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1699606297221344690}
+    - targetCorrespondingSourceObject: {fileID: 360375151596564303, guid: 1ec7cad42e53d61459eeb9541207a52d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 562612426328111882}
     - targetCorrespondingSourceObject: {fileID: 1728280593283003582, guid: 1ec7cad42e53d61459eeb9541207a52d,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3600885804512746126}
+    - targetCorrespondingSourceObject: {fileID: 1728280593283003582, guid: 1ec7cad42e53d61459eeb9541207a52d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9213133451503823352}
   m_SourcePrefab: {fileID: 100100000, guid: 1ec7cad42e53d61459eeb9541207a52d, type: 3}
 --- !u!1 &7934412829138196118 stripped
 GameObject:
@@ -129,6 +142,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5477197, y: 1.8210331, z: 0.20170335}
   m_Center: {x: 0.0051773386, y: 0.5886065, z: -0.012604099}
+--- !u!114 &9213133451503823352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7934412829138196118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c793e1a1fafa649ad743037626d62a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8440253354223673209 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1ec7cad42e53d61459eeb9541207a52d,
@@ -219,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d04473b9826db80418e5f4c1a9bd3c83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brain: {fileID: 0}
+  brain: {fileID: 6599956897419039197, guid: 2c4889337242f114cb608d32d6bc3eef, type: 3}
   Weapon: {fileID: 3600885804512746126}
   Shield: {fileID: 1699606297221344690}
 --- !u!1 &8998450640234106215 stripped
@@ -249,3 +274,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0589715, y: 1.3741033, z: 0.40547103}
   m_Center: {x: -0.010443986, y: -0.010129196, z: 0.20758246}
+--- !u!114 &562612426328111882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8998450640234106215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c793e1a1fafa649ad743037626d62a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

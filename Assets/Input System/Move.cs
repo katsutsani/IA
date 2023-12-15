@@ -9,7 +9,10 @@ public class Move : MonoBehaviour
     private Vector2 _moveVector = Vector2.zero;
     private Vector3 finalVectorForward;
     private Vector3 finalVectorRight;
-
+    private void Awake()
+    {
+        gameObject.SetActive(true);
+    }
     public void OnMovementPerformed(InputAction.CallbackContext context)
     {
         _moveVector = context.ReadValue<Vector2>();

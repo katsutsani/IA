@@ -9,6 +9,11 @@ public class MeleeAttack : MonoBehaviour
     float currentClipLength;
     Coroutine _animation;
     Coroutine _checkCollision;
+
+    private void Awake()
+    {
+        gameObject.SetActive(true);
+    }
     public void HandleAttack(Collider Weapon, Animator animator)
     {
         animator.SetBool("isAttacking", true);
@@ -16,7 +21,6 @@ public class MeleeAttack : MonoBehaviour
         AnimatorClipInfo[] currentAnimation = animator.GetCurrentAnimatorClipInfo(0);
         currentClipLength = currentAnimation[0].clip.length;
         _animation = StartCoroutine(StopAnimation(Weapon,animator));
-        _checkCollision = StartCoroutine(CheckCollision(Weapon));
 
     }
 
@@ -25,17 +29,6 @@ public class MeleeAttack : MonoBehaviour
         yield return new WaitForSeconds(currentClipLength-0.5f);
         Weapon.enabled = false;
         animator.SetBool("isAttacking", false);
-        StopCoroutine(_checkCollision);
         StopCoroutine(_animation);
-    }
-
-    IEnumerator CheckCollision(Collider Weapon)
-    {
-        if (Weapon.isTrigger)
-        {
-            Debug.Log("test");
-        }
-
-        yield return null;
     }
 }
