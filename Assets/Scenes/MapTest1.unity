@@ -12781,7 +12781,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 277638401}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.58851534, y: 0.000000050745403, z: -0.00000003693873, w: 0.8084861}
+  m_LocalRotation: {x: 0.5885154, y: -0.000000010379161, z: 0.000000007555228, w: 0.80848604}
   m_LocalPosition: {x: -24.02, y: 11.053101, z: 10.767139}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -44993,7 +44993,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937892778}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.58851534, y: 0.000000050745403, z: -0.00000003693873, w: 0.8084861}
+  m_LocalRotation: {x: 0.5885154, y: -0.000000010379161, z: 0.000000007555228, w: 0.80848604}
   m_LocalPosition: {x: -24.02, y: 11.053101, z: 10.767139}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -47343,7 +47343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 979625531}
-  - component: {fileID: 979625530}
+  - component: {fileID: 979625532}
   m_Layer: 0
   m_Name: Move
   m_TagString: Untagged
@@ -47351,19 +47351,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &979625530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 979625529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f945bb5332250f47b997c1591b009b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 4
 --- !u!4 &979625531
 Transform:
   m_ObjectHideFlags: 0
@@ -47379,6 +47366,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &979625532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979625529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f945bb5332250f47b997c1591b009b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 2
 --- !u!1001 &979975277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53963,7 +53963,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveObject: {fileID: 979625529}
-  Shoot: {fileID: 1746826808}
   Aim: {fileID: 1308714234}
   MeleeAttack: {fileID: 679315323}
   Defense: {fileID: 64982355}
@@ -85156,12 +85155,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2952305245191328394, guid: 655ea974c40323641a2d41c3a6179595,
     type: 3}
   m_PrefabInstance: {fileID: 1744515821}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1746826808 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3390365226464993213, guid: 942a8f5f7e2642e46bd24555a75dec10,
-    type: 3}
-  m_PrefabInstance: {fileID: 636018047}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1750439208
 PrefabInstance:
