@@ -9,7 +9,6 @@ public class PlayerInputSystem : MonoBehaviour
 {
 
     public GameObject moveObject;
-    public GameObject Shoot;
     public GameObject Aim;
     public GameObject MeleeAttack;
     public GameObject Defense;
@@ -17,7 +16,7 @@ public class PlayerInputSystem : MonoBehaviour
     public Collider Weapon;
     public Collider Shield;
 
-    Move moveScript;
+    MovePlayer moveScript;
     MeleeAttack attackScript;
     Defend defenseScript;
 
@@ -32,7 +31,7 @@ public class PlayerInputSystem : MonoBehaviour
     void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
-        moveScript = moveObject.GetComponent<Move>();
+        moveScript = moveObject.GetComponent<MovePlayer>();
         rotationScript = Aim.GetComponent<LookAt>();
         attackScript = MeleeAttack.GetComponent<MeleeAttack>();
         if (Shield)

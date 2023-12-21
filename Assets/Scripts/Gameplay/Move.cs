@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Move : MonoBehaviour
+public class MovePlayer : MonoBehaviour
 {
     public float Speed = 2.0f;
     private Vector2 _moveVector = Vector2.zero;
