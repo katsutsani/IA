@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -27,6 +28,7 @@ public class PlayerInputSystem : MonoBehaviour
     private PlayerInput playerInput;
     PlayerInputActions input;
     public Animator animator;
+    public int noiseLevel;
 
     void Awake()
     {
@@ -50,6 +52,7 @@ public class PlayerInputSystem : MonoBehaviour
         input.Player.Attack.started += ctx =>
         {
             attackScript.HandleAttack(Weapon,animator);
+            noiseLevel = 10;
         };
         input.Player.Defend.started += ctx =>
         {
