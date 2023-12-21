@@ -98,6 +98,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7005434733413585637}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1ec7cad42e53d61459eeb9541207a52d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6171700769382680209}
     - targetCorrespondingSourceObject: {fileID: 360375151596564303, guid: 1ec7cad42e53d61459eeb9541207a52d,
         type: 3}
       insertIndex: -1
@@ -247,6 +251,18 @@ MonoBehaviour:
   brain: {fileID: 6599956897419039197, guid: 2c4889337242f114cb608d32d6bc3eef, type: 3}
   Weapon: {fileID: 3600885804512746126}
   Shield: {fileID: 1699606297221344690}
+--- !u!114 &6171700769382680209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8440253354223673209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 503339073b1c7b441b5764d3eedab140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8998450640234106215 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 360375151596564303, guid: 1ec7cad42e53d61459eeb9541207a52d,
