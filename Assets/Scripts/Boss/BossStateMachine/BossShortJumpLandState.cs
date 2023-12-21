@@ -9,7 +9,6 @@ public class BossShortJumpLandState : BossBaseState
         float force = .5f;
         boss._shakeScreen.StartShakeScreen(force);
        _waitStatic = boss.StartCoroutine(WaitStatic(boss));
-        boss._bossRigidbody.transform.LookAt(boss._door.playerGameObject.transform.position);
 
     }
     public override void UpdateState(BossStateManager boss)

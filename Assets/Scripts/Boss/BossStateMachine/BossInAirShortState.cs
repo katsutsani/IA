@@ -73,11 +73,11 @@ public class BossInAirShortState : BossBaseState
                 }
                 if (_halfX && !_halfZ)
                 {
-                    boss._bossRigidbody.transform.Translate(new Vector3(0.0f * signX, 2f, 0.5f * signZ) * boss._speed * Time.deltaTime);
+                    boss._bossRigidbody.transform.Translate(new Vector3(0.0f * signX, 2f, 1f * signZ) * boss._speed * Time.deltaTime);
                 }
                 else if (!_halfX && _halfZ)
                 {
-                    boss._bossRigidbody.transform.Translate(new Vector3(0.5f * signX, 2f, 0.0f * signZ) * boss._speed * Time.deltaTime);
+                    boss._bossRigidbody.transform.Translate(new Vector3(1f * signX, 2f, 0.0f * signZ) * boss._speed * Time.deltaTime);
                 }
                 else if (_halfX && _halfZ)
                 {
@@ -85,7 +85,7 @@ public class BossInAirShortState : BossBaseState
                 }
                 else
                 {
-                    boss._bossRigidbody.transform.Translate(new Vector3(0.5f * signX, 2.0f, 0.5f * signZ) * boss._speed * Time.deltaTime);
+                    boss._bossRigidbody.transform.Translate(new Vector3(1f * signX, 2.0f, 1f * signZ) * boss._speed * Time.deltaTime);
                 }
 
             }
@@ -110,11 +110,11 @@ public class BossInAirShortState : BossBaseState
                 }
                 if (_otherHalfX && !_otherHalfZ)
                 {
-                    boss._bossRigidbody.transform.Translate(new Vector3(0.0f * signX, 0.0f, 0.5f * signZ) * boss._speed * Time.deltaTime);
+                    boss._bossRigidbody.transform.Translate(new Vector3(0.0f * signX, 0.0f, 1f * signZ) * boss._speed * Time.deltaTime);
                 }
                 else if (!_otherHalfX && _otherHalfZ)
                 {
-                    boss._bossRigidbody.transform.Translate(new Vector3(0.5f * signX, 0.0f, 0.0f * signZ) * boss._speed * Time.deltaTime);
+                    boss._bossRigidbody.transform.Translate(new Vector3(1f * signX, 0.0f, 0.0f * signZ) * boss._speed * Time.deltaTime);
                 }
                 else if (_otherHalfX && _otherHalfZ)
                 {
@@ -122,7 +122,7 @@ public class BossInAirShortState : BossBaseState
                 }
                 else
                 {
-                    boss._bossRigidbody.transform.Translate(new Vector3(0.5f * signX, 0.0f, 0.5f * signZ) * boss._speed * Time.deltaTime);
+                    boss._bossRigidbody.transform.Translate(new Vector3(1f * signX, 0.0f, 1f * signZ) * boss._speed * Time.deltaTime);
                 }
             }
             else if (_end)

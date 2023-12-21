@@ -95,7 +95,7 @@ public class BossIdleState : BossBaseState
         {
             if (!boss._isInSecondPhase)
             {
-                int Jump = Random.Range(0, 1);
+                int Jump = Random.Range(1, 2);
                 if (Jump == 1)
                 {
                     boss.SwitchState(boss._startShortJumpState);
@@ -121,7 +121,7 @@ public class BossIdleState : BossBaseState
     {
         while (true)
         {
-            _bossRigidbody.transform.rotation = Quaternion.identity;
+            boss._bossRigidbody.transform.rotation = Quaternion.identity;
             _halfX = false;
             _halfZ = false;
             _otherHalfX = false;
@@ -129,8 +129,8 @@ public class BossIdleState : BossBaseState
             _end = false;
             _hasTravelHalf = false;
             initialPos = _bossRigidbody.position;
-            MaxX = Random.Range(-15f, 15f);
-            MaxZ = Random.Range(-15f, 15f);
+            MaxX = Random.Range(-5, 5);
+            MaxZ = Random.Range(-5, 5);
             if (MaxX < 0)
             {
                 signX = -1;

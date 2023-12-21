@@ -17,11 +17,14 @@ public class BossStateManager : MonoBehaviour
 
     public ShootBullet _shootBullet;
 
+    public Transform _rotateBoss;
+
     public float _bulletSpeed = 10;
 
     public bool _isInSecondPhase;
 
     public int _nbShoot;
+    public int _alreadyShoot =0;
     public float _speed;
 
     BossBaseState _currentState;
