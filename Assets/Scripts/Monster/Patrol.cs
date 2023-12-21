@@ -43,7 +43,6 @@ public class Patrol : Node
             Transform wp = _waypoints[currentWaypointIndex];
             if (Vector3.Distance(_transform.position, wp.position) < 1f)
             {
-                _transform.position = wp.position;
                 waitCounter = 0.0f;
                 isWaiting = true;
 
@@ -52,6 +51,8 @@ public class Patrol : Node
             }
             else
             {
+                _agent.transform.LookAt(wp.position);
+                _agent.speed = 2;
                 _agent.SetDestination(wp.position);
                 _animator.SetBool("isWalking", true);
             }
