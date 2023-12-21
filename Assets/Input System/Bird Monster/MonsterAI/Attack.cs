@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Attack : Node
+public class Attack : NodeEmile
 {
     private Animator _animator;
     private Transform _lastTarget;

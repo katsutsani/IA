@@ -2,16 +2,16 @@ using System.Collections.Generic;
 
 namespace BehaviorTree
 {
-    public class Sequence : Node
+    public class Sequence : NodeEmile
     {
         public Sequence() : base() { }
-        public Sequence(List<Node> children) : base(children) { }
+        public Sequence(List<NodeEmile> children) : base(children) { }
 
         public override NodeState Evaluate()
         {
             bool anyChildIsRunning = false;
 
-            foreach (Node node in children)
+            foreach (NodeEmile node in children)
             {
                 switch (node.Evaluate())
                 {

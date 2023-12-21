@@ -4,7 +4,7 @@ using UnityEngine;
 
 using BehaviorTree;
 
-public class Patrol : Node
+public class Patrol : NodeEmile
 {
     private Transform _transform;
     private Transform[] _waypoints;

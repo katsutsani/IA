@@ -4,7 +4,7 @@ using UnityEngine;
 
 using BehaviorTree;
 
-public class CheckRangePlayer : Node
+public class CheckRangePlayer : NodeEmile
 {
     LayerMask myLayerMask = LayerMask.GetMask("player");
 

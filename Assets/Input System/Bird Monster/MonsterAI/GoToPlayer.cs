@@ -4,7 +4,7 @@ using UnityEngine;
 
 using BehaviorTree;
 
-public class GoToPlayer : Node
+public class GoToPlayer : NodeEmile
 {
     private Transform _transform;
 
