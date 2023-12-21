@@ -36,9 +36,6 @@ public class Attack : NodeEmile
 
         switch (_nameSplit[0])
         {
-            case "Cactoro":
-                rangeAttack = MonsterDataCactoro.rangeAttack;
-                break;
             case "Bird":
                 rangeAttack = MonsterDataBird.rangeAttack;
                 break;

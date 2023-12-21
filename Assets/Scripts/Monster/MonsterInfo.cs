@@ -7,7 +7,8 @@ public class MonsterInfo : MonoBehaviour
 {
     [SerializeField] private float health = 10f;
     private bool healTime = true;
-    private bool attack = false;
+    [SerializeField] private GameObject bullet;
+    [SerializeField] private Transform bulletSpawnPoint;
 
     public int TakeHit()
     {
@@ -22,6 +23,22 @@ public class MonsterInfo : MonoBehaviour
         else
         {
             return 2;
+        }
+    }
+
+    public bool ShootBullet()
+    {
+        if (health > 0)
+        {
+            var Bullet = Instantiate(bullet, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+            Bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * 10;
+            return false;
+        }
+        else
+        {
+            gameObject.layer = LayerMask.NameToLayer("Default");
+            gameObject.transform.position = new Vector3(0.8135204f, 0.02000046f, -1.324965f);
+            return true;
         }
     }
 

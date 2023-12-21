@@ -10,14 +10,43 @@ public class AttackDistance : NodeEmile
     private Transform _lastTarget;
     private EnemyAI _enemyAI;
     private NavMeshAgent _agent;
+    private MonsterInfo _monsterInfo;
 
     private float attackTime = 1.0f;
     private float attackCounter = 0.0f;
+
+    private string _name;
+    private string[] _nameSplit;
+    private float rangeAttack;
 
     public AttackDistance(Transform transform)
     {
         this._animator = transform.GetComponent<Animator>();
         this._agent = transform.GetComponent<NavMeshAgent>();
+        this._monsterInfo = transform.GetComponent<MonsterInfo>();
+    }
+
+    void SplitName()
+    {
+        _name = _animator.transform.name;
+        _nameSplit = _name.Split('-');
+    }
+
+    void GetMonster()
+    {
+        SplitName();
+
+        switch (_nameSplit[0])
+        {
+            case "Cactoro":
+                rangeAttack = MonsterDataCactoro.rangeAttackDistance;
+                break;
+            case "Ninja":
+                rangeAttack = MonsterDataNinja.rangeAttackDistance;
+                break;
+            default:
+                break;
+        }
     }
 
     public override NodeState Evaluate()
@@ -45,7 +74,7 @@ public class AttackDistance : NodeEmile
         if(attackCounter >= attackTime)
         {
 
-            bool isDead = _enemyAI.TakeHit();
+            bool isDead = _monsterInfo.ShootBullet();
 
             if (isDead)
             {

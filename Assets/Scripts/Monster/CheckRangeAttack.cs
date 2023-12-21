@@ -27,7 +27,7 @@ public class CheckRangeAttack : NodeEmile
         switch (_nameSplit[0])
         {
             case "Cactoro":
-                rangeAttack = MonsterDataCactoro.rangeAttack;
+                rangeAttack = MonsterDataCactoro.rangeAttackDistance;
                 break;
             case "Bird":
                 rangeAttack = MonsterDataBird.rangeAttack;
