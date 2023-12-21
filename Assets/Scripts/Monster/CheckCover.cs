@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class CheckCover : Node
+public class CheckCover : NodeEmile
 {
     private MonsterInfo _monsterInfo;
     private Transform _transform;

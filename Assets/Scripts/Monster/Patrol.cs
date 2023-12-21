@@ -6,7 +6,7 @@ using UnityEngine.AI;
 using BehaviorTree;
 using Unity.VisualScripting;
 
-public class Patrol : Node
+public class Patrol : NodeEmile
 {
     private Transform _transform;
     private Transform[] _waypoints;

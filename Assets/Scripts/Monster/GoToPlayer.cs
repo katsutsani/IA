@@ -5,7 +5,7 @@ using UnityEngine;
 using BehaviorTree;
 using UnityEngine.AI;
 
-public class GoToPlayer : Node
+public class GoToPlayer : NodeEmile
 {
     private Transform _transform;
     private NavMeshAgent _agent;

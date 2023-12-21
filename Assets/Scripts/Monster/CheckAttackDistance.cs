@@ -2,7 +2,7 @@ using BehaviorTree;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class CheckAttackDistance : Node
+public class CheckAttackDistance : NodeEmile
 {
     private Transform _transform;
     private Animator _animator;

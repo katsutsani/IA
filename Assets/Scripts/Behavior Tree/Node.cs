@@ -10,30 +10,30 @@ namespace BehaviorTree
         FAILURE,
     }
 
-    public class Node
+    public class NodeEmile
     {
         protected NodeState state;
 
-        public Node parent; 
+        public NodeEmile parent; 
 
-        protected List<Node> children = new List<Node>();
+        protected List<NodeEmile> children = new List<NodeEmile>();
 
         private Dictionary<string, object> dataContext = new Dictionary<string, object>();
 
-        public Node() 
+        public NodeEmile() 
         { 
             parent = null;   
         }
 
-        public Node(List<Node> children)
+        public NodeEmile(List<NodeEmile> children)
         {
-            foreach (Node child in children)
+            foreach (NodeEmile child in children)
             {
                 Attach(child);
             }
         }
 
-        public void Attach(Node node)
+        public void Attach(NodeEmile node)
         {
             node.parent = this;
             children.Add(node);
@@ -54,7 +54,7 @@ namespace BehaviorTree
                 return value;
             }
 
-            Node node = parent;
+            NodeEmile node = parent;
 
             while (node != null)
             {
@@ -77,7 +77,7 @@ namespace BehaviorTree
                 return true;
             }
 
-            Node node = parent;
+            NodeEmile node = parent;
 
             while (node != null)
             {

@@ -5,11 +5,11 @@ public class MonsterDataCactoro : Tree
 {
     public static float rangeAttack = 500;
 
-    protected override Node SetupTree()
+    protected override NodeEmile SetupTree()
     {
-        Node root = new Selector(new List<Node>
+        NodeEmile root = new Selector(new List<NodeEmile>
         {
-            new Sequence(new List<Node>
+            new Sequence(new List<NodeEmile>
             {
                 new CheckRangeAttack(transform),
                 new Attack(transform),

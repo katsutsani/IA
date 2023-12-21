@@ -4,7 +4,7 @@ using UnityEngine;
 using BehaviorTree;
 using UnityEngine.AI;
 
-public class GoToCover : Node
+public class GoToCover : NodeEmile
 {
     private Transform _transform;
     private NavMeshAgent _agent;

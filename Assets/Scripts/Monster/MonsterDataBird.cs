@@ -9,16 +9,16 @@ public class MonsterDataBird : Tree
     public static float rangeSee = 6f;
     public static float rangeAttack = 2f;
 
-    protected override Node SetupTree()
+    protected override NodeEmile SetupTree()
     {
-        Node root = new Selector(new List<Node>
+        NodeEmile root = new Selector(new List<NodeEmile>
         {
-            new Sequence(new List<Node>
+            new Sequence(new List<NodeEmile>
             {
                 new CheckRangeAttack(transform),
                 new Attack(transform),
             }),
-            new Sequence(new List<Node>
+            new Sequence(new List<NodeEmile>
             {
                 new CheckRangePlayer(transform),
                 new GoToPlayer(transform),

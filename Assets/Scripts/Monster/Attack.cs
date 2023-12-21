@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Attack : Node
+public class Attack : NodeEmile
 {
     private Animator _animator;
     private Transform _lastTarget;
