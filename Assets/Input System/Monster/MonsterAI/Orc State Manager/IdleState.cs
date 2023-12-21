@@ -24,11 +24,15 @@ public class IdleState : State
         noiseLevel = brain.GetComponent<PlayerInputSystem>().noiseLevel;
         patrolState.isWaiting = false;
         orcAnimator.SetBool("isWaiting", false);
-
-        if (noiseLevel > 0)
+        float distance = Vector3.Distance(chaseState._transform.position, chaseState.idleState.patrolState._transform.position);
+        if (noiseLevel > 0 && distance < 10)
         {
             canHearThePlayer = true;
             orcAnimator.SetBool("canHearThePlayer", true);
+        }
+        else
+        {
+            brain.GetComponent<PlayerInputSystem>().noiseLevel = 0;
         }
         if (canHearThePlayer)
         {

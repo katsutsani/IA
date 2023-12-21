@@ -21,10 +21,15 @@ public class PatrolState : State
     public override State RunCurrentState()
     {
         idleState.noiseLevel = idleState.brain.GetComponent<PlayerInputSystem>().noiseLevel;
-        if (idleState.noiseLevel > 0)
+        float distance = Vector3.Distance(chaseState._transform.position, chaseState.idleState.patrolState._transform.position);
+        if (idleState.noiseLevel > 0 && distance < 10)
         {
             idleState.canHearThePlayer = true;
             idleState.orcAnimator.SetBool("canHearThePlayer", true);
+        }
+        else
+        {
+            idleState.brain.GetComponent<PlayerInputSystem>().noiseLevel = 0;
         }
         if (currentWaypointIndex < 0) 
         {
