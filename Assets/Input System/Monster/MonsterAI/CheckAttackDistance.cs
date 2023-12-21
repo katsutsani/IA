@@ -31,12 +31,15 @@ public class CheckAttackDistance : Node
                 state = NodeState.SUCCESS;
                 return state;
             }
+
             state = NodeState.FAILURE;
             return state;
         }
 
         Transform target = (Transform)t;
+
         Vector3 direction = target.position - _transform.position;
+
         RaycastHit hit;
 
         direction.Normalize();
@@ -51,17 +54,14 @@ public class CheckAttackDistance : Node
 
         if (Physics.Raycast(rayStart, direction, out hit, MonsterDataNinja.rangeAttackDistance))
         {
+            _transform.LookAt(target.position);
+
             Debug.DrawRay(rayStart, direction * hit.distance, Color.red);
 
             if (hit.collider.gameObject.layer == LayerMask.NameToLayer("player"))
             {
-                _agent.ResetPath();
-                _agent.SetDestination(_transform.position);
-
                 _animator.SetBool("isWalking", false);
                 _animator.SetBool("isPunch", true);
-
-                Debug.Log("distance");
 
                 state = NodeState.SUCCESS;
                 return state;

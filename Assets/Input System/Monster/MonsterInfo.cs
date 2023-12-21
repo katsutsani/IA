@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class MonsterInfo : MonoBehaviour
 {
-    [SerializeField] private float health = 2f;
+    [SerializeField] private float health = 10f;
     private bool healTime = true;
+    private bool attack = false;
 
     public int TakeHit()
     {

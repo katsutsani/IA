@@ -2,26 +2,61 @@ using BehaviorTree;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Attack : Node
 {
     private Animator _animator;
     private Transform _lastTarget;
     private EnemyAI _enemyAI;
+    private NavMeshAgent _agent;
 
     private float attackTime = 1.0f;
     private float attackCounter = 0.0f;
 
+    private string _name;
+    private string[] _nameSplit;
+    private float rangeAttack;
+
     public Attack(Transform transform)
     {
         this._animator = transform.GetComponent<Animator>();
+        this._agent = transform.GetComponent<NavMeshAgent>();
+    }
+
+    void SplitName()
+    {
+        _name = _animator.transform.name;
+        _nameSplit = _name.Split('-');
+    }
+
+    void GetMonster()
+    {
+        SplitName();
+
+        switch (_nameSplit[0])
+        {
+            case "Cactoro":
+                rangeAttack = MonsterDataCactoro.rangeAttack;
+                break;
+            case "Bird":
+                rangeAttack = MonsterDataBird.rangeAttack;
+                break;
+            case "Ninja":
+                rangeAttack = MonsterDataNinja.rangeAttack;
+                break;
+            default:
+                break;
+        }
     }
 
     public override NodeState Evaluate()
     {
+        GetMonster();
+
         Transform target = (Transform)GetData("target");
 
-        if (_lastTarget != null && Vector3.Distance(target.position, _animator.transform.position) > MonsterDataBird.rangeAttack)
+        if (_lastTarget != null && Vector3.Distance(target.position, _animator.transform.position) > rangeAttack)
         {
             ClearData("target");
 
@@ -43,6 +78,8 @@ public class Attack : Node
 
         if(attackCounter >= attackTime)
         {
+            _agent.ResetPath();
+
             bool isDead = _enemyAI.TakeHit();
 
             if (isDead)

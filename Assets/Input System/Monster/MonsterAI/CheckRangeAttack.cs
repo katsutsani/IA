@@ -52,6 +52,7 @@ public class CheckRangeAttack : Node
         GetMonster();
 
         object t = GetData("target");
+
         if (t == null)
         {
             Collider[] colliders = Physics.OverlapSphere(_transform.position, rangeAttack, myLayerMask);
@@ -71,6 +72,14 @@ public class CheckRangeAttack : Node
         Vector3 direction = target.position - _transform.position;
         RaycastHit hit;
 
+        /*if (Vector3.Distance(_transform.position, target.position) > rangeAttack)
+        {
+            Debug.Log("la");
+            _transform.LookAt(target.position);
+            _agent.enabled = false;
+        }*/
+
+
         direction.Normalize();
 
         Vector3 rayStart = _transform.position + Vector3.up * 1f;
@@ -81,10 +90,9 @@ public class CheckRangeAttack : Node
 
             if (hit.collider.gameObject.layer == LayerMask.NameToLayer("player"))
             {
-                _agent.SetDestination(_transform.position);
-                _agent.ResetPath();
                 _animator.SetBool("isWalking", false);
                 _animator.SetBool("isPunch", true);
+
                 Debug.Log("la");
 
                 state = NodeState.SUCCESS;

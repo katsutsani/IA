@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 using BehaviorTree;
+using Unity.VisualScripting;
 
 public class Patrol : Node
 {
@@ -51,6 +52,7 @@ public class Patrol : Node
             }
             else
             {
+                /*_agent.enabled = true;*/
                 _agent.SetDestination(wp.position);
                 _animator.SetBool("isWalking", true);
             }
