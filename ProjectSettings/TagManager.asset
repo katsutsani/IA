@@ -8,13 +8,15 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Floor
   - Water
   - UI
   - player
   - Monsters
   - SafeZone
   - 
+  - Invu
+  - Boss
   - 
   - 
   - 
