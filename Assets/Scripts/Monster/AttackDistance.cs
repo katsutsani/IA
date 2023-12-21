@@ -51,9 +51,11 @@ public class AttackDistance : NodeEmile
 
     public override NodeState Evaluate()
     {
+        GetMonster();
+
         Transform target = (Transform)GetData("target");
 
-        if (_lastTarget != null && Vector3.Distance(target.position, _animator.transform.position) > MonsterDataNinja.rangeAttackDistance)
+        if (_lastTarget != null && Vector3.Distance(target.position, _animator.transform.position) > rangeAttack)
         {
             _animator.SetBool("isPunch", false);
             _animator.SetBool("isWalking", true);
@@ -73,7 +75,7 @@ public class AttackDistance : NodeEmile
 
         if(attackCounter >= attackTime)
         {
-
+            _animator.transform.LookAt(target.position);
             bool isDead = _monsterInfo.ShootBullet();
 
             if (isDead)
