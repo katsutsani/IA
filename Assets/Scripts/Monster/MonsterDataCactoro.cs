@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class MonsterDataCactoro : Tree
 {
-    public static float rangeAttack = 500;
+    public static float rangeAttackDistance = 500;
 
     protected override NodeEmile SetupTree()
     {
@@ -12,7 +12,7 @@ public class MonsterDataCactoro : Tree
             new Sequence(new List<NodeEmile>
             {
                 new CheckRangeAttack(transform),
-                new Attack(transform),
+                new AttackDistance(transform),
             }),
         });
         return root;
