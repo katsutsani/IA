@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : Node
+public class Health : NodeEmile
 {
     private Animator _animator;
     private Transform _transform;

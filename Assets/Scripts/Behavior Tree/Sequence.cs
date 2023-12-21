@@ -9,11 +9,9 @@ namespace BehaviorTree
 
         public override NodeState Evaluate()
         {
-            bool anyChildIsRunning = false;
-
-            foreach (NodeEmile node in children)
+            for (int i = 0; i < children.Count; i++)
             {
-                Node node = children[i];
+                NodeEmile node = children[i];
                 switch (node.Evaluate())
                 {
                     case NodeState.FAILURE:

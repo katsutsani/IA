@@ -2,7 +2,7 @@ using BehaviorTree;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class CheckNoAttack : Node
+public class CheckNoAttack : NodeEmile
 {
     private Transform _transform;
     private Animator _animator;

@@ -2,7 +2,7 @@ using BehaviorTree;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class CheckRangeAttack : Node
+public class CheckRangeAttack : NodeEmile
 {
     private Transform _transform;
     private Animator _animator;
