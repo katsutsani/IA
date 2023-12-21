@@ -261,6 +261,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7174375558470179306}
+    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: b63922ff2a037484186c8df262c83ae8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4121764118792788994}
   m_SourcePrefab: {fileID: 100100000, guid: b63922ff2a037484186c8df262c83ae8, type: 3}
 --- !u!4 &5467247339197774273 stripped
 Transform:
@@ -395,3 +399,19 @@ MonoBehaviour:
   health: 10
   bullet: {fileID: 1556681942071191421, guid: 5d2277551dddea5408508d00a54033ff, type: 3}
   bulletSpawnPoint: {fileID: 2456190802630976966}
+  _enemyTakeDamage: {fileID: 4121764118792788994}
+--- !u!114 &4121764118792788994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9044575666191977426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab8279b466a7f87489d4086c36ea85df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 30
+  _particle: {fileID: 0}
+  _monsterInfo: {fileID: 7174375558470179306}

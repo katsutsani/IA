@@ -446,6 +446,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5058593323744290941}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 833a6c2860dbefa449b98228006737db,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5566288961174782360}
   m_SourcePrefab: {fileID: 100100000, guid: 833a6c2860dbefa449b98228006737db, type: 3}
 --- !u!4 &8585292593029518496 stripped
 Transform:
@@ -560,9 +564,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d51f4885048ebf842acb897d1376b5c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 90
   bullet: {fileID: 1556681942071191421, guid: 5d2277551dddea5408508d00a54033ff, type: 3}
   bulletSpawnPoint: {fileID: 64673642348712071}
+  _enemyTakeDamage: {fileID: 5566288961174782360}
 --- !u!195 &5058593323744290941
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -585,3 +590,17 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &5566288961174782360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8966322217015135770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab8279b466a7f87489d4086c36ea85df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  _particle: {fileID: 0}

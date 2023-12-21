@@ -5,16 +5,22 @@ using UnityEngine;
 
 public class MonsterInfo : MonoBehaviour
 {
-    [SerializeField] private float health = 10f;
+    [SerializeField] public int health = 90;
     private bool healTime = true;
     [SerializeField] private GameObject bullet;
     [SerializeField] private Transform bulletSpawnPoint;
+    [SerializeField] private EnemyTakeDamage _enemyTakeDamage;
+
+    public void Awake()
+    {
+        _enemyTakeDamage.health = health;
+    }
 
     public int TakeHit()
     {
         if (health > 0)
         {
-            if(health < 5 && healTime == true)
+            if(health < 45 && healTime == true)
             {
                 return 1;
             }
@@ -34,27 +40,16 @@ public class MonsterInfo : MonoBehaviour
             Bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * 10;
             return false;
         }
-        else
-        {
-            gameObject.layer = LayerMask.NameToLayer("Default");
-            gameObject.transform.position = new Vector3(0.8135204f, 0.02000046f, -1.324965f);
-            return true;
-        }
-    }
-
-    public void DestroyEntity()
-    {
-
-        gameObject.layer = LayerMask.NameToLayer("player");
+        return true;
     }
 
     public bool Heal()
     {
-        if(health < 6)
+        if(health <= 45)
         {
             healTime = false;
-            health += 4f;
-
+            health += 25;
+            _enemyTakeDamage.health = health;
             return true;
         }
         else

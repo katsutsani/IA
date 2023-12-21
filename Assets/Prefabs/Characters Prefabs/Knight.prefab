@@ -161,6 +161,7 @@ MonoBehaviour:
   _hitEnnemyParticle: {fileID: 19800000, guid: f06e78284f831ae469c74624ab5d513b, type: 3}
   _hitWalls: {fileID: 198330214428362902, guid: a97415c6b57076f41a6621a7b51d63a3,
     type: 3}
+  _playerAnimator: {fileID: 2682649731148731705}
 --- !u!1 &8440253354223673209 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1ec7cad42e53d61459eeb9541207a52d,
@@ -307,3 +308,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hitEnnemyParticle: {fileID: 0}
   _hitWalls: {fileID: 0}
+  _playerAnimator: {fileID: 0}
