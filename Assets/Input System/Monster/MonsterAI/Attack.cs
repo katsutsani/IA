@@ -58,8 +58,6 @@ public class Attack : Node
 
         if (_lastTarget != null && Vector3.Distance(target.position, _animator.transform.position) > rangeAttack)
         {
-            ClearData("target");
-
             _animator.SetBool("isPunch", false);
             _animator.SetBool("isWalking", true);
 
@@ -78,7 +76,6 @@ public class Attack : Node
 
         if(attackCounter >= attackTime)
         {
-            _agent.ResetPath();
 
             bool isDead = _enemyAI.TakeHit();
 

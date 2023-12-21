@@ -35,7 +35,11 @@ public class MonsterDataNinja : Tree
                     new Attack(transform),
                 }),*/
             }),
-            new Patrol(transform, waypoints),
+            new Sequence(new List<Node>
+            {
+                new CheckNoAttack(transform),
+                new Patrol(transform, waypoints),
+            }),
         });
         return root;
     }

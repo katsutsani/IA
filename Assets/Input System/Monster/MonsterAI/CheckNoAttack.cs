@@ -2,7 +2,7 @@ using BehaviorTree;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class CheckAttackDistance : Node
+public class CheckNoAttack : Node
 {
     private Transform _transform;
     private Animator _animator;
@@ -10,7 +10,7 @@ public class CheckAttackDistance : Node
 
     LayerMask myLayerMask = LayerMask.GetMask("player");
 
-    public CheckAttackDistance(Transform transform)
+    public CheckNoAttack(Transform transform)
     {
         this._transform = transform;
         this._animator = transform.GetComponent<Animator>();
@@ -28,11 +28,11 @@ public class CheckAttackDistance : Node
             {
                 parent.parent.SetData("target", colliders[0].transform);
 
-                state = NodeState.SUCCESS;
+                state = NodeState.FAILURE;
                 return state;
             }
 
-            state = NodeState.FAILURE;
+            state = NodeState.SUCCESS;
             return state;
         }
 
@@ -46,25 +46,29 @@ public class CheckAttackDistance : Node
 
         Vector3 rayStart = _transform.position + Vector3.up * 1f;
 
+        if (Vector3.Distance(_transform.position, target.position) < MonsterDataNinja.rangeAttack)
+        {
+            state = NodeState.SUCCESS;
+            return state;
+        }
+
         if (Physics.Raycast(rayStart, direction, out hit, MonsterDataNinja.rangeAttackDistance))
         {
-            _agent.SetDestination(target.position);
             _transform.LookAt(target.position);
+
+            Debug.DrawRay(rayStart, direction * hit.distance, Color.red);
 
             if (hit.collider.gameObject.layer == LayerMask.NameToLayer("player"))
             {
                 _animator.SetBool("isWalking", false);
                 _animator.SetBool("isPunch", true);
 
-                _agent.ResetPath();
-                _agent.velocity = Vector3.zero;
-
-                state = NodeState.SUCCESS;
+                state = NodeState.FAILURE;
                 return state;
             }
         }
 
-        state = NodeState.FAILURE;
+        state = NodeState.SUCCESS;
         return state;
     }
 }

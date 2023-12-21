@@ -52,7 +52,6 @@ public class Patrol : Node
             }
             else
             {
-                /*_agent.enabled = true;*/
                 _agent.SetDestination(wp.position);
                 _animator.SetBool("isWalking", true);
             }
