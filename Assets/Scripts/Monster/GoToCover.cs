@@ -24,15 +24,13 @@ public class GoToCover : Node
         
         if (Vector3.Distance(target.position, _agent.transform.position) < 0.7f)
         {
-            Debug.Log(Vector3.Distance(target.position, _agent.transform.position));
-
             _agent.ResetPath();
             _animator.SetBool("isWalking", false);
 
             state = NodeState.SUCCESS;
             return state;
         }
-
+        _agent.speed = 4;
         _agent.SetDestination(target.position);
 
         _animator.SetBool("isWalking", true);

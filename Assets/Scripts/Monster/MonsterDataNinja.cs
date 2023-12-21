@@ -29,11 +29,11 @@ public class MonsterDataNinja : Tree
                     new CheckRangeAttack(transform),
                     new Attack(transform),
                 }),
-                /*new Sequence(new List<Node>
+                new Sequence(new List<Node>
                 {
                     new CheckAttackDistance(transform),
-                    new Attack(transform),
-                }),*/
+                    new AttackDistance(transform),
+                }),
             }),
             new Sequence(new List<Node>
             {
