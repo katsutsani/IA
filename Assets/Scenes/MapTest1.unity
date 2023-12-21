@@ -19640,6 +19640,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3343839851563734358, guid: 655ea974c40323641a2d41c3a6179595,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25717,7 +25722,7 @@ PrefabInstance:
     - target: {fileID: 3343839851563734358, guid: 655ea974c40323641a2d41c3a6179595,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -105893,7 +105898,7 @@ PrefabInstance:
     - target: {fileID: 4248986243501791929, guid: 6271a2bd7db0c7d45a2bd939e19ddc2b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 4248986243501791929, guid: 6271a2bd7db0c7d45a2bd939e19ddc2b,
         type: 3}
@@ -105987,6 +105992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24cd0ee745dfad2438f0654ad3ee2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentState: {fileID: 762314592}
 --- !u!195 &3936694000908029430 stripped
 NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 1763980966508435661, guid: 6271a2bd7db0c7d45a2bd939e19ddc2b,
