@@ -37,18 +37,13 @@ public class CheckAttackDistance : NodeEmile
         }
 
         Transform target = (Transform)t;
-
         Vector3 direction = target.position - _transform.position;
-
         RaycastHit hit;
-
         direction.Normalize();
-
         Vector3 rayStart = _transform.position + Vector3.up * 1f;
 
         if (Physics.Raycast(rayStart, direction, out hit, MonsterDataNinja.rangeAttackDistance))
         {
-            _agent.SetDestination(target.position);
             _transform.LookAt(target.position);
 
             if (hit.collider.gameObject.layer == LayerMask.NameToLayer("player"))
