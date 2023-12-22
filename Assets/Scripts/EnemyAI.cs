@@ -8,7 +8,6 @@ public class EnemyAI : MonoBehaviour
 {
 
     protected int health = 5;
-    Rigidbody rb;
     [SerializeField] ParticleSystem _getHit;
     [SerializeField] ParticleSystem _playerDead;
     [SerializeField] ParticleSystem _playerRespawn;
@@ -22,7 +21,6 @@ public class EnemyAI : MonoBehaviour
 
     public void Awake()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
     }
 
@@ -31,7 +29,6 @@ public class EnemyAI : MonoBehaviour
         if (health > 0)
         {
             health--;
-            rb.velocity = (-rb.transform.forward) * 1;
             var Particle = Instantiate(_getHit, gameObject.transform.position, gameObject.transform.rotation);
             Particle.Play();
             _animator.SetBool("getHit", true);
