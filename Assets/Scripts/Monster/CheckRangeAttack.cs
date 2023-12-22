@@ -79,6 +79,8 @@ public class CheckRangeAttack : NodeEmile
 
         if (Physics.Raycast(rayStart, direction, out hit, rangeAttack - 1f))
         {
+            _agent.SetDestination(target.position);
+            _transform.LookAt(target.position);
 
             if (hit.collider.gameObject.layer == LayerMask.NameToLayer("player"))
             {
